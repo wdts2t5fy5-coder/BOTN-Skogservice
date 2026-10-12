@@ -22,6 +22,21 @@
     sjekk();
   }
 
+  /* ---------- menyknappen pa smale skjermer ---------- */
+  const knapp = document.querySelector('.bar-meny');
+  if (bar && knapp) {
+    const sett = (apen) => {
+      bar.classList.toggle('apen', apen);
+      knapp.setAttribute('aria-expanded', apen ? 'true' : 'false');
+      knapp.setAttribute('aria-label', apen ? 'Lukk menyen' : 'Meny');
+    };
+    knapp.addEventListener('click', () => sett(!bar.classList.contains('apen')));
+    bar.querySelectorAll('.bar-links a').forEach((a) => a.addEventListener('click', () => sett(false)));
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') sett(false); });
+    document.addEventListener('click', (e) => { if (!bar.contains(e.target)) sett(false); });
+    window.addEventListener('resize', () => { if (window.innerWidth > 980) sett(false); });
+  }
+
   /* ---------- granskog i forgrunnen av fjorden ---------- */
   const skog = (rnd, W, H, lav, hoy) => {
     let d = `M0 ${H}`;
