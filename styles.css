@@ -162,6 +162,19 @@
   .tag{display:inline-block;margin-left:10px;padding:5px 9px 4px;border-radius:999px;font:600 10.5px/1 var(--body);letter-spacing:.09em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);vertical-align:.25em}
   .svc-note{margin-top:28px;font-size:14.5px;color:var(--muted);max-width:70ch}
 
+  /* ---------- skogfond ---------- */
+  .k-spec a{color:var(--accent);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:1px}
+  .k-spec a:hover{color:var(--fg)}
+  .tre-kol{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(28px,4vw,56px)}
+  .tre-kol div{display:grid;gap:12px;align-content:start;padding-top:24px;border-top:1px solid var(--line)}
+  .tre-kol p{color:var(--muted);max-width:42ch}
+  .fond-boks{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(24px,4vw,64px);align-items:end;margin-top:clamp(44px,6vw,76px);padding:clamp(24px,3.4vw,44px);border:1px solid var(--accent);border-radius:var(--ujevn);background:rgba(126,78,44,.05)}
+  .fond-boks > div{display:grid;gap:12px}
+  .fond-boks h3{font-size:clamp(24px,2.5vw,32px)}
+  .fond-boks p{max-width:58ch}
+  .fine{font-size:14px;line-height:1.6;color:var(--muted)}
+  .fond-lapp{margin-top:26px;color:var(--accent);transform:rotate(-2deg);transform-origin:0 0}
+
   /* ---------- du bestemmer ---------- */
   .valg{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(40px,6vw,96px);align-items:center}
   .valg-liste{display:grid;margin:0;padding:0;list-style:none;border-bottom:1px solid var(--line)}
@@ -346,6 +359,8 @@
     body::after{display:none}
     .om,.valg,.fs,.kit,.aerlig,.smak,.kontakt-grid{grid-template-columns:1fr}
     .kontakt-topp{grid-template-columns:1fr}
+    .tre-kol,.fond-boks{grid-template-columns:1fr}
+    .tre-kol{gap:28px}
     .merke{grid-template-columns:1fr 1fr;gap:36px clamp(24px,5vw,48px);align-items:start}
     .merke-tegn{grid-column:1/-1;order:-1;justify-self:center;margin-bottom:8px}
     .merke-v{text-align:left;justify-items:start}
