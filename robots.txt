@@ -1,0 +1,3 @@
+# Testutlegg: hele nettstedet holdes ute av søkemotorer inntil videre
+User-agent: *
+Disallow: /
