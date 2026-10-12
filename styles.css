@@ -89,7 +89,7 @@
   /* ---------- hero ---------- */
   .hero{--bg:var(--fjell);--fg:var(--bein);position:relative;display:grid;align-items:end;min-height:clamp(600px,94vh,960px);min-height:clamp(600px,94svh,960px);overflow:hidden;color:var(--bein);
     background:linear-gradient(180deg,#1b1a17 0%,#2c2a25 45%,#17150f 100%)}
-  .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 45%;filter:sepia(.34) saturate(.8) brightness(1.06) contrast(1.02);animation:fjord-in 1.4s ease both}
+  .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 45%;filter:sepia(.3) saturate(.78) brightness(.94) contrast(1.02);animation:fjord-in 1.4s ease both}
   .hero-veil{position:absolute;inset:0;z-index:1;pointer-events:none;background:
     linear-gradient(90deg,rgba(20,16,13,.74) 0%,rgba(20,16,13,.34) 46%,rgba(20,16,13,0) 78%),
     linear-gradient(180deg,rgba(20,16,13,.62) 0%,rgba(20,16,13,0) 26%),
