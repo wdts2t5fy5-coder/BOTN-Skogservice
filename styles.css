@@ -65,7 +65,7 @@
 
   /* ---------- fast toppmeny ---------- */
   .bar{--fg:var(--bein);--bg:var(--fjell);position:fixed;top:0;left:0;right:0;z-index:20;color:var(--bein);border-bottom:1px solid transparent;transition:background-color .3s ease,border-color .3s ease}
-  .bar.solid{background:rgba(20,16,13,.88);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom-color:rgba(230,220,202,.1)}
+  .bar.solid,.bar.apen{background:rgba(20,16,13,.88);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom-color:rgba(230,220,202,.1)}
   .bar-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:16px;transition:padding .3s ease}
   .bar.solid .bar-inner{padding-block:10px}
   .brand{display:inline-flex;align-items:center;gap:13px;text-decoration:none;color:var(--bein)}
@@ -363,10 +363,6 @@
     .bar.apen .bar-links{visibility:visible;opacity:1;transform:none;transition:opacity .22s ease,transform .22s ease}
     .bar-links li + li{border-top:1px solid rgba(230,220,202,.1)}
     .bar-links a{display:block;padding-block:17px;font-size:13.5px;color:var(--bein)}
-    /* iPhone: Safari farger feltet bak klokka og batteriet etter en fast meny med ren bakgrunnsfarge.
-       Derfor er menyen alltid tett på mobil, og filmkornet (et fast lag over hele skjermen) er slått av */
-    .bar,.bar.solid{background-color:var(--fjell);-webkit-backdrop-filter:none;backdrop-filter:none;border-bottom-color:rgba(230,220,202,.1);transition:none}
-    body::after{display:none}
     .om,.valg,.fs,.kit,.aerlig,.smak,.kontakt-grid{grid-template-columns:1fr}
     .kontakt-topp{grid-template-columns:1fr}
     .tre-kol,.fond-boks{grid-template-columns:1fr}
@@ -416,6 +412,13 @@
     .foot-rule{flex-wrap:wrap;justify-content:center;gap:14px 20px}
     .foot-txt{letter-spacing:.24em;font-size:10.5px}
     .foot-mark{order:-1;flex-basis:100%;height:34px}
+  }
+  /* Berøringsskjermer (telefon og nettbrett): menyen har alltid bakgrunn, også helt øverst.
+     Safari på iPhone farger feltet bak klokka og batteriet etter en fast meny med bakgrunnsfarge,
+     og filmkornet (et fast lag over hele skjermen) kan komme i veien for det, så det er slått av her */
+  @media (hover:none),(pointer:coarse){
+    .bar,.bar.solid{background-color:rgba(20,16,13,.86);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom-color:rgba(230,220,202,.1);transition:none}
+    body::after{display:none}
   }
   @media (prefers-reduced-motion:reduce){
     *,*::before,*::after{animation:none!important;transition:none!important}
