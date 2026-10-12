@@ -93,10 +93,10 @@
   .hero-veil{position:absolute;inset:0;z-index:1;pointer-events:none;background:
     linear-gradient(90deg,rgba(20,16,13,.74) 0%,rgba(20,16,13,.34) 46%,rgba(20,16,13,0) 78%),
     linear-gradient(180deg,rgba(20,16,13,.62) 0%,rgba(20,16,13,0) 26%),
-    linear-gradient(0deg,rgba(20,16,13,.7) 0%,rgba(20,16,13,0) 40%)}
+    linear-gradient(0deg,rgba(20,16,13,.92) 0%,rgba(20,16,13,.5) 14%,rgba(20,16,13,0) 42%)}
   @keyframes fjord-in{from{opacity:0;transform:scale(1.05)}to{opacity:1;transform:none}}
 
-  .hero-inner{position:relative;z-index:3;display:grid;gap:clamp(20px,2.6vw,32px);justify-items:start;padding-top:120px;padding-bottom:clamp(120px,15vw,210px)}
+  .hero-inner{position:relative;z-index:3;display:grid;gap:clamp(20px,2.6vw,32px);justify-items:start;padding-top:120px;padding-bottom:clamp(64px,8vw,112px)}
   .hero-eyebrow{margin:0;font:600 12px/1.4 var(--body);letter-spacing:.2em;text-transform:uppercase;color:rgba(230,220,202,.82)}
   .hero-eyebrow a{color:var(--rust-lys);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:1px}
   .hero h1{margin:0;font-family:var(--display);font-optical-sizing:auto;font-variation-settings:'SOFT' 70,'WONK' 1;font-weight:500;font-size:clamp(56px,10.4vw,150px);line-height:.92;letter-spacing:-.025em;color:var(--bein);text-shadow:0 4px 40px rgba(6,8,7,.4)}
@@ -109,11 +109,6 @@
   .rise{animation:rise 1s cubic-bezier(.2,.7,.2,1) both}
   .rise-2{animation-delay:.2s}.rise-3{animation-delay:.38s}.rise-4{animation-delay:.56s}
   @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-
-  /* granskogen i forgrunnen: tegnes av skriptet, to lag for dybde */
-  .treline{position:absolute;left:0;right:0;bottom:-1px;z-index:2;width:100%;height:clamp(84px,11vw,168px);display:block;pointer-events:none}
-  .treline .bak{fill:#2a231a;opacity:.9}
-  .treline .foran{fill:var(--fjell)}
 
   .remse{background:var(--fjell);color:rgba(230,220,202,.74)}
   .remse-inner{display:flex;justify-content:space-between;gap:10px 24px;flex-wrap:wrap;padding-block:16px 24px;font:500 11.5px/1.5 var(--body);letter-spacing:.14em;text-transform:uppercase}

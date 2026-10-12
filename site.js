@@ -1,4 +1,4 @@
-/* Felles for forsiden og galleriet: toppmeny, granskog, årringer og rolig innrulling */
+/* Felles for forsiden og galleriet: toppmeny, årringer og rolig innrulling */
 (function () {
   document.documentElement.classList.add('js');
 
@@ -36,38 +36,6 @@
     document.addEventListener('click', (e) => { if (!bar.contains(e.target)) sett(false); });
     window.addEventListener('resize', () => { if (window.innerWidth > 980) sett(false); });
   }
-
-  /* ---------- granskog i forgrunnen av fjorden ---------- */
-  const skog = (rnd, W, H, lav, hoy) => {
-    let d = `M0 ${H}`;
-    let x = -20;
-    while (x < W + 20) {
-      // bølger i høyden, så skogen får lier og søkk i stedet for en jevn kam
-      const terreng = .5 + .5 * Math.sin(x / 210 + 1.3) * Math.sin(x / 67);
-      const h = lav + (hoy - lav) * (.25 + .75 * rnd()) * (.55 + .45 * terreng);
-      const w = h * (.17 + rnd() * .07);
-      const cx = x + w;
-      const n = h > 70 ? 5 : 4;
-      const venstre = [], hoyre = [];
-      for (let t = 0; t < n; t++) {
-        const y0 = H - h * (t / n) * .9 - h * .05;
-        const y1 = H - h * ((t + 1) / n) * .9 - h * .01;
-        const ut = w * (1 - t / n);
-        const inn = w * (1 - (t + 1) / n) * .5 + .7;
-        venstre.push(`L${r1(cx - ut)} ${r1(y0)} L${r1(cx - inn)} ${r1(y1)}`);
-        hoyre.unshift(`L${r1(cx + inn)} ${r1(y1)} L${r1(cx + ut)} ${r1(y0)}`);
-      }
-      d += ` L${r1(cx - w)} ${H} ${venstre.join(' ')} L${r1(cx)} ${r1(H - h)} ${hoyre.join(' ')} L${r1(cx + w)} ${H}`;
-      x += w * 2 * (.5 + rnd() * .55);
-    }
-    return d + ` L${W} ${H} Z`;
-  };
-  document.querySelectorAll('.treline').forEach((svg) => {
-    svg.innerHTML =
-      `<path class="bak" d="${skog(fro(7), 2400, 170, 60, 168)}"/>` +
-      `<path class="foran" d="${skog(fro(23), 2400, 170, 34, 120)}"/>` +
-      '<rect class="foran" x="0" y="168" width="2400" height="4"/>';
-  });
 
   /* ---------- årringer ---------- */
   document.querySelectorAll('.ringer').forEach((el, nr) => {
