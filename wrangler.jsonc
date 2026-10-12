@@ -1,0 +1,9 @@
+{
+  // Cloudflare Workers: nettstedet er bare statiske filer, så det trengs ingen kode.
+  // Navnet må være det samme som prosjektnavnet i Cloudflare-dashbordet.
+  "name": "botn-skogservice",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./"
+  }
+}

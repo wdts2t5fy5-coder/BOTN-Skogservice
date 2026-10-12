@@ -1,0 +1,7 @@
+# Filer som ligger i mappa, men ikke skal ut på nettstedet
+.git
+.gitignore
+.assetsignore
+.claude
+.DS_Store
+wrangler.jsonc
