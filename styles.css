@@ -76,7 +76,7 @@
   .bar-links{display:flex;align-items:center;gap:clamp(18px,2.2vw,32px);margin:0;padding:0;list-style:none}
   .bar-links a{font:600 12px/1 var(--body);letter-spacing:.13em;text-transform:uppercase;text-decoration:none;color:rgba(230,220,202,.8);padding-block:8px;transition:color .2s ease}
   .bar-links a:hover{color:var(--bein)}
-  .bar-call{min-height:40px;padding:0 16px;font-size:11.5px;border-color:rgba(216,212,199,.5)}
+  .bar-call{min-height:40px;padding:0 16px;font-size:11.5px;border-color:rgba(216,212,199,.5);white-space:nowrap;flex:none}
   /* menyknappen: tre streker som blir til et kryss. Vises bare når lenkene ikke får plass */
   .bar-meny{display:none;position:relative;flex:none;width:44px;height:40px;padding:0;border:1.5px solid rgba(216,212,199,.5);border-radius:var(--rund);background:transparent;color:var(--bein);cursor:pointer}
   .bar-meny span{position:absolute;left:11px;right:11px;top:50%;height:1.5px;margin-top:-.75px;background:currentColor;border-radius:2px;transition:transform .25s ease,opacity .2s ease}
@@ -88,8 +88,8 @@
 
   /* ---------- hero ---------- */
   .hero{--bg:var(--fjell);--fg:var(--bein);position:relative;display:grid;align-items:end;min-height:clamp(600px,94vh,960px);min-height:clamp(600px,94svh,960px);overflow:hidden;color:var(--bein);
-    background:linear-gradient(180deg,#1f2220 0%,#4d504b 42%,#8e8d86 65%,#34352f 66.5%,#121412 100%)}
-  .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 50%;filter:saturate(.92) sepia(.2) contrast(1.02);animation:fjord-in 1.4s ease both}
+    background:linear-gradient(180deg,#1b1a17 0%,#2c2a25 45%,#17150f 100%)}
+  .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 45%;filter:sepia(.34) saturate(.8) brightness(1.06) contrast(1.02);animation:fjord-in 1.4s ease both}
   .hero-veil{position:absolute;inset:0;z-index:1;pointer-events:none;background:
     linear-gradient(90deg,rgba(20,16,13,.74) 0%,rgba(20,16,13,.34) 46%,rgba(20,16,13,0) 78%),
     linear-gradient(180deg,rgba(20,16,13,.62) 0%,rgba(20,16,13,0) 26%),
@@ -397,8 +397,8 @@
     .brand-under{display:none}
     /* toppbildet og remsen under fyller hele skjermen på telefon, også bak nettleserens flytende verktøylinje,
        så den lyse seksjonen ikke stikker fram før man har rullet */
-    .hero{min-height:calc(100vh - 76px);min-height:calc(100lvh - 76px)}
-    .hero-img{object-position:68% 50%}
+    .hero{min-height:calc(100vh - 12px);min-height:calc(100lvh - 12px)}
+    .hero-img{object-position:63% 50%}
     .hero-inner{padding-top:104px}
     .hero-cta .btn{flex:1 1 100%}
     .remse-inner{justify-content:center;text-align:center}
