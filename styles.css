@@ -72,7 +72,8 @@
   .brand .m{width:31px;height:32px;fill:currentColor;flex:none}
   .brand-navn{display:grid;gap:5px}
   .ordmerke{font-family:var(--display);font-weight:600;font-size:20px;line-height:1;letter-spacing:.2em;text-transform:uppercase}
-  .brand-under{font:500 10.5px/1 var(--body);letter-spacing:.25em;text-transform:uppercase;color:rgba(230,220,202,.82)}
+  /* SKOG sperres ut så ordet står like bredt som BOTN over; negativ marg tar bort sperringen etter siste bokstav */
+  .brand-under{font:500 11px/1 var(--body);letter-spacing:1.31em;margin-right:-1.31em;text-transform:uppercase;color:rgba(230,220,202,.82)}
   .bar-links{display:flex;align-items:center;gap:clamp(18px,2.2vw,32px);margin:0;padding:0;list-style:none}
   .bar-links a{font:600 12px/1 var(--body);letter-spacing:.13em;text-transform:uppercase;text-decoration:none;color:rgba(230,220,202,.8);padding-block:8px;transition:color .2s ease}
   .bar-links a:hover{color:var(--bein)}
@@ -385,7 +386,6 @@
   @media (max-width:640px){
     body{font-size:16px}
     .bar-call{padding:0 12px}
-    .brand-under{font-size:9px;letter-spacing:.16em}   /* samme bredde som BOTN over, så ring-knappen og menyknappen får plass */
     /* toppbildet og remsen under fyller hele skjermen på telefon, også bak nettleserens flytende verktøylinje,
        så den lyse seksjonen ikke stikker fram før man har rullet */
     .hero{min-height:calc(100vh - 12px);min-height:calc(100lvh - 12px)}
