@@ -1,0 +1,24 @@
+# Gamle adresser fra FjordFix-nettstedet. fjordfix.no og fjordfix.com viser nå denne siden,
+# og lenker fra Google og andre steder skal lande riktig i stedet for på en feilside.
+/kontakt /#kontakt 301
+/kontakt.html /#kontakt 301
+/takk /#kontakt 301
+/takk.html /#kontakt 301
+/priser /#kontakt 301
+/priser.html /#kontakt 301
+/tjenester /#tjenester 301
+/tjenester.html /#tjenester 301
+/vedlikehold /#tjenester 301
+/vedlikehold.html /#tjenester 301
+/om-fjordfix /#om 301
+/om-fjordfix.html /#om 301
+/tidsplan / 301
+/tidsplan.html / 301
+/personvern / 301
+/personvern.html / 301
+/nn/galleri /galleri 301
+/nn/galleri.html /galleri 301
+/en/galleri /galleri 301
+/en/galleri.html /galleri 301
+/nn/* / 301
+/en/* / 301
