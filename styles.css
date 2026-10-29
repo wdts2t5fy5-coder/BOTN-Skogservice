@@ -348,7 +348,7 @@
   .foot-rule{display:flex;align-items:center;gap:clamp(14px,2.5vw,32px)}
   .foot-line{flex:1;height:1px;background:rgba(216,212,199,.2)}
   .foot-txt{font:600 11.5px/1 var(--body);letter-spacing:.26em;text-transform:uppercase;color:#9A9183;white-space:nowrap}
-  .foot-mark{width:30px;height:31px;color:var(--bein);flex:none}
+  .foot-mark{width:34px;height:35px;color:var(--bein);flex:none}
   .foot-meta{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;margin-top:30px;font:400 11px/1.6 var(--body);letter-spacing:.03em}
 
   /* ---------- kommer rolig inn når man ruller ---------- */
@@ -412,7 +412,7 @@
     .foot-line{display:none}
     .foot-rule{flex-wrap:wrap;justify-content:center;gap:14px 20px}
     .foot-txt{letter-spacing:.24em;font-size:10.5px}
-    .foot-mark{order:-1;flex-basis:100%;height:34px}
+    .foot-mark{order:-1;flex-basis:100%;height:35px}
   }
   /* Berøringsskjermer (telefon og nettbrett): filmkornet er et fast lag over hele skjermen, og kan komme
      i veien for at Safari på iPhone farger feltet bak klokka og batteriet etter toppmenyen. Derfor av her */
